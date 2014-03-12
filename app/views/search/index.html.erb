@@ -1,15 +1,15 @@
-<% set_meta_tags :description => "Search results for #{@query}.", :canonical => "http://answers.honolulu.gov#{request.fullpath}", :title => "Search results for #{@query}." %>
+<% set_meta_tags :description => "Search results for #{@query}.", :canonical => "http://answers.honolulu.gov#{request.fullpath}", :title => "Suchergebnisse für #{@query}." %>
 
 <div class="page-container search">
   <div class="row">
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <h1>Search results for: &ldquo;<strong><%=@query%></strong>&rdquo;</h1>
+          <h1>Suchergebnisse für: &ldquo;<strong><%=@query%></strong>&rdquo;</h1>
 
           <% unless (@query_corrected == @query) || (@query_corrected.blank?) %>
             <div class="suggestion">
-              Did you mean:"
+              Meinst du:"
               <%= link_to @query_corrected, search_path(:q => @query_corrected) %>
               "?
            </div>
@@ -18,8 +18,7 @@
           <br/>
           <% if @results.blank? %>
             <p>
-              Sorry, no results found for "<%=@query%>". Please try rephrasing
-              your search terms.
+              Entschuldigung, für "<%=@query%>" wurden keine Ergebnisse gefunden. Versuch, die Suche umzuformulieren.
             </p>
           <% else %>
             <ul>
