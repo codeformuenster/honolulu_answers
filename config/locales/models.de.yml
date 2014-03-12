@@ -1,8 +1,14 @@
 de:
   activerecord:
     models:
-      category: "Kategorie"
-      user: "Benutzer"
+      category:
+        one: Kategorie
+        other: Kategorien
+      user: Benutzer
+      article: Artikel
+      contact:
+        one: Kontakt
+        other: Kontakte
     attributes:
       created_at: Erstellt am
       user:

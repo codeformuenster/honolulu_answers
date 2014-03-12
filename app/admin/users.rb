@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  menu :if => proc{ current_user.is_admin? || current_user.is_editor? }, :label => 'Users'
+  menu :if => proc{ current_user.is_admin? || current_user.is_editor? }
 
     index do
       column :email
