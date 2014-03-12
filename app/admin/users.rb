@@ -11,13 +11,13 @@ ActiveAdmin.register User do
     end
 
     form do |f|
-      f.inputs "User Details" do
+      f.inputs "Benutzerdetails" do
         f.input :email
         f.input :password
         f.input :password_confirmation
         f.input :department
       end
-      f.inputs "Type of User" do
+      f.inputs "Rollen" do
         f.input :is_admin,   :label => "Administrator"
         f.input :is_editor,  :label => "Editor"
         f.input :is_writer,  :label => "Writer"

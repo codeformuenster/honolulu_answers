@@ -1,0 +1,15 @@
+de:
+  activerecord:
+    models:
+      category: "Kategorie"
+      user: "Benutzer"
+    attributes:
+      created_at: Erstellt am
+      user:
+        is_admin: ist Admin
+        is_writer: ist Autor
+        is_editor: ist Redakteur
+        department: Abteilung
+        password: Passwort
+        password_confirmation: Bestätigung
+        encrypted_password: Verschlüsseltes Passwort
