@@ -24,7 +24,7 @@ Honoluluanswers::Application.configure do
   config.assets.digest = true
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( home.js style.css mobile.css.scss active_admin.js active_admin.css.scss )
+  config.assets.precompile += %w( application-all.css application-mobile.css application-print.css application-ie.css active_admin.js active_admin.css.scss )
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
