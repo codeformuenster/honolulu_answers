@@ -3,9 +3,13 @@ lock '3.1.0'
 
 set :application, 'muensterfaq'
 set :repo_url, 'git@github.com:codeformuenster/muenster_faq.git'
+set :rbenv_type, :user # or :system, depends on your rbenv setup
+set :rbenv_ruby, '1.9.3-p484'
+
+set :unicorn_config_path, 'config/unicorn.rb'
 
 #set :rvm_ruby_string, :local
-set :deploy_to, "/home/rails"
+set :deploy_to, "/var/www/muenster_faq"
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
@@ -28,7 +32,7 @@ set :deploy_to, "/home/rails"
 # set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
