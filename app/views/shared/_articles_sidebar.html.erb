@@ -2,7 +2,7 @@
         <%= render(:partial => 'shared/flash_info') if flash[:info] %>
         <% unless @article.contact.nil? %>
           <div class="sidebar-unit">
-            <h4 class="side-head">NEED MORE INFO?</h4>
+            <h4 class="side-head">BENÖGIGST DU MEHR INFOS?</h4>
             <div class="sidebar-content">
               <% if @article.contact.url.index(',') == nil %>
                 <%= content_tag(:h4, link_to_unless(@article.contact.url.blank?, @article.contact.name, @article.contact.url, :target => "_blank")) %>
@@ -16,7 +16,7 @@
               <% end %>
               <%= raw @article.contact.address %>
               <% if @article.contact.number.length > 0 %>
-                <%= raw "Phone: #{@article.contact.number}" %>
+                <%= raw "Telefon: #{@article.contact.number}" %>
               <% end %>
             </div>
           </div>
@@ -24,7 +24,7 @@
         <% if @article.keywords.count > 0 %>
           <% unless @article.related.empty? %>
             <div class="sidebar-unit">
-              <h4 class="side-head">RELATED TOPICS</h4>
+              <h4 class="side-head">ÄHNLICHE THEMEN</h4>
               <div class="sidebar-content">
                 <ul>
                   <% @article.related.each do |art| %>
@@ -39,7 +39,7 @@
         <% end -%>
         <% unless @article.author_name.blank? %>
           <div class="sidebar-unit">
-            <h4 class="side-head">AUTHORED BY</h4>
+            <h4 class="side-head">VERFASST VON</h4>
             <div class="sidebar-content">
               <ul>
                 <% if @article.author_link.blank? %>
