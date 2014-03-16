@@ -3,7 +3,7 @@
   <div class="breadcrumbs">
     <%= link_to( "Home", root_url) %>
     >
-    <%= title "All #{@article_type.split(/(?=[A-Z])/).join(' ')}s" %>
+    <%= title "Alle #{@article_type.split(/(?=[A-Z])/).join(' ')}s" %>
   </div>
   <div class="row">
     <div class="span9">
@@ -21,7 +21,7 @@
                   <% category = article.category %>
                   <li class="category-listing">
                   <% unless article.category %>
-                    <%= content_tag(:h1, "Miscellaneous") %>
+                    <%= content_tag(:h1, "Verschiedenes") %>
                   <% else %>
                   <%= content_tag(:h1, link_to(article.category.name,article.category)) %>
                   <% end %>

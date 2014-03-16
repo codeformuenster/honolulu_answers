@@ -1,23 +1,23 @@
-<%= f.inputs "Article Details" do %>
+<%= f.inputs "Artikel Details" do %>
   <%=f.input :title %>
   <%=f.input :preview, :input_html => { :rows => 4 } %>
   <%=f.input :category %>
-  <%=f.input :contact, :label => "Contact / More Info" %>
+  <%=f.input :contact, :label => "Kontakt / Mehr Infos" %>
   <% if @article.is_a? WebService %>
-    <%=f.input :service_url, :label => "Web Service link" %>
+    <%=f.input :service_url, :label => "Webdienst Link" %>
   <% end %>
-  <%=f.input :tags, :as => :string, :label => "Keywords" %>
-  <%=f.input :author_link, :label => "Write-a-thon Author Link" %>
-  <%=f.input :author_pic, :label => "Write-a-thon Author Pic" %>
+  <%=f.input :tags, :as => :string, :label => "Schlagworte" %>
+  <%=f.input :author_link, :label => "Link des Write-a-thon Autors" %>
+  <%=f.input :author_pic, :label => "Bild des Write-a-thon Autors" %>
   <% if @article.author_pic.exists? %>
     <li class="file input optional">
       <div class="author_image">
         <%= image_tag(@article.author_pic.url(:thumb),
-                      :alt => "Current Write-a-thon Author Pic",
-                      :title => "Current Write-a-thon Author Pic") %>
+                      :alt => "Aktuelles Bild des Write-a-thon Autors",
+                      :title => "Aktuelles Bild des Write-a-thon Autors") %>
       </div>
     </li>
   <% end %>
-  <%=f.input :author_name, :label => "Write-a-thon Author Name" %>
+  <%=f.input :author_name, :label => "Name des Write-a-thon Autors" %>
 <% end %> <!-- details -->
 

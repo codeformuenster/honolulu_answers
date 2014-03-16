@@ -1,5 +1,5 @@
-<%= f.inputs "Content" do %>
-  <% main_content_label = (@article.is_a? QuickAnswer) ? "Content for Gray Box" : "Content main extra" %>
+<%= f.inputs "Inhalt" do %>
+  <% main_content_label = (@article.is_a? QuickAnswer) ? "Inhalt für graue Box" : "Haupt-Inhalt (Extra) " %>
   <div class="wmd-panel">
     <div id="wmd-button-bar-content_main" class="wmd-button-bar"></div>
       <%= f.input :content_main, :label => main_content_label, :input_html => {
