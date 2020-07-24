@@ -35,7 +35,7 @@ gem 'httparty'                            # For accessing APIs directly
 gem 'json'                                # Convert between JSON and Ruby objects
 
 ## Content and presentation
-gem 'kramdown'                            # Better markdown parser with support for markdown-extra
+gem 'kramdown'                            , '>= 2.3.0' # Better markdown parser with support for markdown-extra
 gem 'friendly_id'                         # Create permalinks / descriptive URLs / slugs
 gem 'paperclip', '~> 3.0'                 # Easy file attachment library for ActiveRecord
 gem 'aws-sdk', '~> 1.3.4'                 # Upload files to Amazon S3
