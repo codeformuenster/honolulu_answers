@@ -38,7 +38,7 @@ gem 'json'                                # Convert between JSON and Ruby object
 gem 'kramdown'                            # Better markdown parser with support for markdown-extra
 gem 'friendly_id'                         # Create permalinks / descriptive URLs / slugs
 gem 'paperclip', '~> 3.0'                 # Easy file attachment library for ActiveRecord
-gem 'aws-sdk', '~> 1.3.4'                 # Upload files to Amazon S3
+gem 'aws-sdk', '~> 1.3.9' # Upload files to Amazon S3
 
 ## Gems used only for assets and not required
 ## in production environments by default.
@@ -56,7 +56,7 @@ group :test, :development do
   gem 'rspec-rails', '>= 2.0'             # Testing framework
   gem 'shoulda', '~> 3.5.0'               # Extra RSpec matchers for Active Record Associations
   gem 'factory_girl_rails', '~> 4.0'      # Create factories to test against
-  gem 'capybara', '~> 2.1'
+  gem 'capybara', '~> 2.1', '>= 2.1.0'
   gem 'guard', '~> 1.8.0'
   gem 'guard-rspec', '~> 3.0.0'
   gem 'terminal-notifier-guard'
