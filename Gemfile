@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ## Essentials
 ruby '1.9.3'                              # Ruby!
-gem 'rails', '3.2.16'                     # Rails!
+gem 'rails', '6.0.3.5' # Rails!
 gem 'pg'
 gem 'thin'                                # Web server
 
@@ -23,7 +23,7 @@ gem 'dalli'                               # memcache gem for Rails.cache
 gem 'kgio'                                # gives 20~30% performance boost to Dalli
 
 ## Admin
-gem 'activeadmin', '0.6.0'                # Back-end Content Management System
+gem 'activeadmin', '0.6.0' # Back-end Content Management System
 gem 'devise', '~> 2.0'                    # User authentication
 gem 'cancan'                              # User permissions
 
@@ -60,7 +60,7 @@ group :test, :development do
   gem 'guard', '~> 1.8.0'
   gem 'guard-rspec', '~> 3.0.0'
   gem 'terminal-notifier-guard'
-  gem 'sextant'                           # visit /rails/routes in the browser for nicer 'rake routes'
+  gem 'sextant'                           , '>= 0.2.3' # visit /rails/routes in the browser for nicer 'rake routes'
   gem 'memcached'                         # Local memcache
   gem 'seed_dump', '~> 0.6.0'             # Adds rake db:seed:dump to generate db/seeds.rb
   gem 'capistrano', '~> 3.1.0'
