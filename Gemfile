@@ -4,18 +4,18 @@ source 'https://rubygems.org'
 
 ## Essentials
 ruby '1.9.3'                              # Ruby!
-gem 'rails', '3.2.16'                     # Rails!
+gem 'rails', '6.0.3.5' # Rails!
 gem 'pg'
 gem 'thin'                                # Web server
 
 gem 'newrelic_rpm', :group => [:production, :staging, :development] # Rails analytics - see the Heroku addon
 gem 'progressbar'                         # Display progress bars in terminal output
 gem 'facets', :require => false           # Some extra methods for ruby
-gem 'jquery-ui-rails'                     # Package jQuery for the Rails 3.1+ asset pipeline
+gem 'jquery-ui-rails'                     , '>= 3.0.1' # Package jQuery for the Rails 3.1+ asset pipeline
 gem 'rollbar', '~>0.10.11'                # SaaS to track exceptions
 
 ## SEO
-gem 'meta-tags', :require => 'meta_tags'  # Search Engine Optimization (SEO) plugin for Ruby on Rails applications.
+gem 'meta-tags', '>= 1.2.6', :require => 'meta_tags' # Search Engine Optimization (SEO) plugin for Ruby on Rails applications.
 
 ## Performance and optimization
 gem 'delayed_job_active_record'           # Lets you queue tasks as background jobs
@@ -23,8 +23,8 @@ gem 'dalli'                               # memcache gem for Rails.cache
 gem 'kgio'                                # gives 20~30% performance boost to Dalli
 
 ## Admin
-gem 'activeadmin', '0.6.0'                # Back-end Content Management System
-gem 'devise', '~> 2.0'                    # User authentication
+gem 'activeadmin', '0.6.0' # Back-end Content Management System
+gem 'devise', '~> 4.7', '>= 4.7.0' # User authentication
 gem 'cancan'                              # User permissions
 
 ## Search and NLP
@@ -43,24 +43,24 @@ gem 'aws-sdk', '~> 1.3.4'                 # Upload files to Amazon S3
 ## Gems used only for assets and not required
 ## in production environments by default.
 group :assets do
-  gem 'sass-rails', '~> 3.2.5'            # Rails support for Sass, a CSS extension language
+  gem 'sass-rails', '~> 5.0.8' # Rails support for Sass, a CSS extension language
   gem "meta_search", '>= 1.1.0.pre'       # Active_admin search for form_for
   gem 'uglifier', '>= 1.0.3'              # Squash down Javascript for speed
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 4.2.2'
   gem 'therubyracer'                      # Embeds the V8 Javascript interpreter into Ruby
 end
 
 ## Testing
 group :test, :development do
   gem 'foreman'
-  gem 'rspec-rails', '>= 2.0'             # Testing framework
+  gem 'rspec-rails', '>= 2.14.0' # Testing framework
   gem 'shoulda', '~> 3.5.0'               # Extra RSpec matchers for Active Record Associations
-  gem 'factory_girl_rails', '~> 4.0'      # Create factories to test against
+  gem 'factory_girl_rails', '~> 4.2', '>= 4.2.1' # Create factories to test against
   gem 'capybara', '~> 2.1'
   gem 'guard', '~> 1.8.0'
   gem 'guard-rspec', '~> 3.0.0'
   gem 'terminal-notifier-guard'
-  gem 'sextant'                           # visit /rails/routes in the browser for nicer 'rake routes'
+  gem 'sextant'                           , '>= 0.2.3' # visit /rails/routes in the browser for nicer 'rake routes'
   gem 'memcached'                         # Local memcache
   gem 'seed_dump', '~> 0.6.0'             # Adds rake db:seed:dump to generate db/seeds.rb
   gem 'capistrano', '~> 3.1.0'
